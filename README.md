@@ -1,0 +1,9 @@
+# Analysis of Users' search on Comparis.ch 
+
+The platform Comparis.ch serves as a central hub for individuals seeking to compare insurance product prices. Every day, a large number of users engage with Comparis, generating a substantial amount of valuable information. Our main goal is to extract pertinent product and user data to conduct a comprehensive market analysis, with a specific focus on private liability, household, and combined private liability and household insurance offerings. By harnessing this extensive dataset, we aim to gain profound insights into insurance trends, consumer preferences, and market dynamics. Ultimately, these insights will guide strategic decision-making within the insurance industry.
+
+Each Comparis request is transmitted to the insurance providers, who then provide information on whether they offer insurance coverage for the specified risk and the corresponding premium. Every request is assigned a unique reference, which is used to construct the exact result page presented to the user for comparing insurance products. This result page can be scraped, resulting in 200-300 kb of JSON data for each request. However, this JSON data contains a large amount of unnecessary information and is highly nested, requiring the extraction of the relevant information before any analysis can be performed.
+
+In this project, we process and analyze Comparis results that were scraped during the second half of June 2023. The code is divided in two parts, the first part "process_raw_comparis_data.ipynb" focuses on the data extraction. In the seocnd code part "comparis_analysis.ipynb" the data saved in parquet format is used to perform variosu analyses.
+
+The data used in this project can be found under https://tmp-raw-comparis-results.s3.eu-central-1.amazonaws.com/raw_comparis_home_results.json (only temporarily avaliable until August 2023)
